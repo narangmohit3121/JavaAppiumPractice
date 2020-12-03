@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GoogleRun" configfailurepolicy="continue"
+	parallel="tests">
+	<listeners>
+		<!-- <listener class-name = "testListener"/> -->
+	</listeners>
+	<test thread-count="5" name="Test" preserve-order="true">
+
+		<groups>
+			<run>
+				<include name="cucumber" />
+			</run>
+		</groups>
+
+		<classes>
+
+			<class name="Runner.TestRunner" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
